@@ -1,5 +1,5 @@
 <?php
-  include 'includes/AbstractCronController.inc.php';
+
   include 'includes/dbConfig.inc.php';
   include 'includes/cronStatus.inc.php';
   include 'includes/viewCron.inc.php';
