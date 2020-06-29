@@ -26,14 +26,40 @@
      <title> Crons </title>
    </head>
    <body>
-     <form action="" method="post">
-     Status: <input type="text" name="cronstatus" placeholder="ok/error"><br>
-     Classname: <input type="text" name="classname"><br>
-     Date: <input type="text" class="datepicker" name="date"><br>
-     Content: <input type="text" name="content"><br>
-     <input type="submit" name="save" value="submit">
-     </form>
+     <h2>SDK</h2>
+     <br></br>
+     <div class="row">
+       <form class="col s12"action="" method="post">
+      <div class="row">
+        <div class="input-field col s6">
+          Status: <input type="text" name="cronstatus" placeholder="ok/error">
+        </div>
+        <div class="input-field col s6">
+          Classname: <input type="text" name="classname" placeholder="classname">
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="input-field col s6">
+       Date: <input type="text" class="datepicker" name="date" placeholder="2020-8-1 10:10:10"><br>
+        </div>
+        <div class="input-field col s6">
+          Content: <input type="text" name="content" placeholder="content"><br>
+        </div>
+      </div>
+
+
+
+
+
+
+       <input type="submit" name="save" value="submit">
+       </form>
+     </div>
+
+
+<br></br>
+<h2>Administrationsansicht</h2>
 <br></br>
 <?php
 $crons = new viewCron();
