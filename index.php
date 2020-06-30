@@ -4,8 +4,9 @@
   include 'includes/cronStatus.inc.php';
   include 'includes/viewCron.inc.php';
   include 'includes/DatabaseWrapper.inc.php';
-  $dbw = new DatabaseWrapper();
 
+  $dbw = new DatabaseWrapper();
+  $dbw->checkdb();
   $dbw->checktable();
 
   if(isset($_POST['save']))
