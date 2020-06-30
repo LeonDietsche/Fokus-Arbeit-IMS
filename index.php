@@ -70,8 +70,6 @@
 <?php
 $crons = new viewCron();
 $crons->showLast100Crons();
-
-
  ?>
  <br></br>
 

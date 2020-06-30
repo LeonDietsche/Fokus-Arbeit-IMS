@@ -3,7 +3,7 @@ class cronStatus extends dbConfig{
 
     protected function getAllCrons(){
 
-    $sql = "Select * FROM cronjobsstatuslogs ORDER BY ID LIMIT 100";
+    $sql = "Select * FROM cronjobsstatuslogs ORDER BY ID LIMIT 99";
     $result = $this->connect()->query($sql);
     $numRows = $result->num_rows;
     if ($numRows > 0) {

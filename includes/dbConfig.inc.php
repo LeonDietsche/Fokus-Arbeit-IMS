@@ -15,17 +15,13 @@ class dbConfig {
     $sql = "create database dbfacron;";
     $conn->query($sql);
     }
-    else
-    {
-      echo "DB exist<br>";
-    }
   }
 
   public function connect(){
   $this->dbServername = "localhost";
   $this->dbUsername = "root";
   $this->dbPassword = "";
-  $this->dbName = "dbFACron";
+  $this->dbName = "dbfacron";
 
   $conn = new mysqli($this->dbServername, $this->dbUsername, $this->dbPassword, $this->dbName);
   return $conn;
