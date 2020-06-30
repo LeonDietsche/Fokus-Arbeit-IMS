@@ -6,6 +6,8 @@
   include 'includes/DatabaseWrapper.inc.php';
   $dbw = new DatabaseWrapper();
 
+  $dbw->checktable();
+
   if(isset($_POST['save']))
   {
      $cronstatus= $_POST['cronstatus'];
@@ -14,6 +16,14 @@
      $content = $_POST['content'];
      $dbw->setCron($cronstatus, $classname, $date, $content);
  }
+
+ if(isset($_POST['delete']))
+ {
+    $id = $_POST['cron_id'];
+    $dbw->deleteCron($id);
+ }
+
+
 
  ?>
  <!DOCTYPE html>
@@ -47,24 +57,32 @@
           Content: <input type="text" name="content" placeholder="content"><br>
         </div>
       </div>
-
-
-
-
-
-
        <input type="submit" name="save" value="submit">
+
+      <br></br>
+
        </form>
      </div>
 
-
-<br></br>
 <h2>Administrationsansicht</h2>
 <br></br>
 <?php
 $crons = new viewCron();
 $crons->showLast100Crons();
- ?>
 
+
+ ?>
+ <br></br>
+
+<div class="row">
+ <form class="col s12" method = "post">
+     <div class="input-field col s12">
+       Input the ID of the Cron you want to delete
+      <input name="cron_id" type="text">
+     </div>
+     <input name="delete" type = "submit" value="delete">
+</form>
+
+</div>
    </body>
  </html>

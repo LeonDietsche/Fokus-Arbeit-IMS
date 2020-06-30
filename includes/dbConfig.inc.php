@@ -11,18 +11,14 @@ class dbConfig {
   $this->dbServername = "localhost";
   $this->dbUsername = "root";
   $this->dbPassword = "";
-  $this->dbName = "testdb";
-
+  $this->dbName = "dbFACron";
   $conn = new mysqli($this->dbServername, $this->dbUsername, $this->dbPassword, $this->dbName);
   return $conn;
-
 
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
   }
 }
-
-
 
  ?>
