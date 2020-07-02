@@ -16,8 +16,8 @@
            $checktable = $this->connect()->query($createtable);
       }
     }
-    public function setCron($cronstatus, $classname,$date, $content ){
 
+    public function setCron($cronstatus, $classname,$date, $content ){
      $sql = "INSERT INTO cronjobsstatuslogs (cronstatus,classname,date,content)
      VALUES ('$cronstatus','$classname','$date','$content')";
      $result = $this->connect()->query($sql);
@@ -25,7 +25,6 @@
     }
 
     public function deleteCron($id){
-
       $sqld = "DELETE FROM cronjobsstatuslogs WHERE id = $id";
       $result = $this->connect()->query($sqld);
       return $result;
