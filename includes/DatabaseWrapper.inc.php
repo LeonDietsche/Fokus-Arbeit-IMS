@@ -17,6 +17,7 @@
       }
     }
 
+
     public function setCron($cronstatus, $classname,$date, $content ){
      $sql = "INSERT INTO cronjobsstatuslogs (cronstatus,classname,date,content)
      VALUES ('$cronstatus','$classname','$date','$content')";

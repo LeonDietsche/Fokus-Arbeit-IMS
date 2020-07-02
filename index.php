@@ -9,8 +9,8 @@
   $dbw->checkdb();
   $dbw->checktable();
 
-  if(isset($_POST['save']))
-  {
+if(isset($_POST['save']))
+{
      $cronstatus= $_POST['cronstatus'];
      $classname = $_POST['classname'];
      $date = $_POST['date'];

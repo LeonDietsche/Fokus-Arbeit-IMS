@@ -2,10 +2,7 @@
 
 abstract class AbstractCronController {
 
-  protected function callCronJob(
-
-    performCronJob();
-  );
+  protected function callCronJob();
   abstract protected function performCronJob();
 }
 
